@@ -14,7 +14,7 @@ const Contact = () => {
             <img
               alt="image of a mobile phone"
               className="m-auto object-fit object-center h-10 inline pr-5"
-              src="./mobile.svg"
+              src="/mobile.svg"
             />
             <span className="inline font-semibold">+385 92 102 8847</span>
           </div>

@@ -6,7 +6,7 @@ const Navbar = () => {
           <a href="/" className="flex items-center max-sm:mb-4">
             <img
               className="h-8 w-auto mr-4"
-              src={"/src/assets/favicon.svg"}
+              src="/favicon.svg"
               alt="Logo image"
             />
             <span className="text-gray-800 text-lg font-bold hover:text-gray-700">
