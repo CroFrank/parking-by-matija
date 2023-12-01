@@ -8,7 +8,7 @@ const Parking = () => {
               <img
                 alt="feature"
                 className="m-auto object-fit object-center h-full w-1/2"
-                src="http://localhost:3000/src/assets/test.jpg"
+                src="/src/assets/test.jpg"
               />
             </a>
           </div>

@@ -6,7 +6,7 @@ const Navbar2 = () => {
           <a href="/" className="flex items-center max-sm:mb-4">
             <img
               className="h-8 w-auto mr-4"
-              src="http://localhost:3000/src/assets/favicon.svg"
+              src="/src/assets/favicon.svg"
               alt="Logo image"
             />
             <h2 className="text-gray-800 text-lg font-bold hover:text-gray-700">
@@ -16,7 +16,7 @@ const Navbar2 = () => {
 
           <div className="flex items-center">
             <a
-              href="http://localhost:3000/"
+              href="/"
               className="text-gray-500 hover:text-gray-900 mx-3 cursor-pointer"
             >
               Naslovnica
