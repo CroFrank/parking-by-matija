@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-100 sm:px-20">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 max-md:flex max-md:justify-center">
           <img className="h-80" alt="hero" src="/plane.svg" />
