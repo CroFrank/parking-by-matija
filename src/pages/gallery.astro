@@ -1,0 +1,56 @@
+---
+import Navbar2 from "../components/Navbar2"
+import Layout from "../layouts/Layout.astro"
+const images = [
+  "asa.avif",
+  "asa.avif",
+  "asa.avif",
+  "asa.avif",
+  "asa.avif",
+  "asa.avif",
+  "1664127401541.jpg",
+  "asa.avif",
+]
+---
+
+<Layout>
+  <Navbar2 />
+  <div
+    class="flex min-h-screen flex-col justify-between py-4 sm:py-6 lg:py-8 mb-10"
+  >
+    <main class="mb-auto">
+      <div class="my-8 sm:my-12">
+        <h2
+          class="mb-4 text-center text-2xl font-semibold text-gray-800 dark:text-white md:mb-6 md:text-3xl lg:text-4xl"
+        >
+          Galerija slika
+        </h2>
+
+        <p
+          class="mx-auto max-w-screen-md text-center text-gray-500 dark:text-slate-400 md:text-lg"
+        >
+          Parking - Airport Zagreb by Matija
+        </p>
+      </div>
+
+      <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+        <div
+          class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:gap-8"
+        >
+          {
+            images.map((image) => (
+              <div class="relative flex h-72 items-end justify-end overflow-hidden rounded-md shadow-lg hover:shadow-xl md:h-96">
+                <div class="absolute inset-0 flex h-full w-full object-cover object-center  transition duration-300 hover:scale-105">
+                  <img
+                    src={`http://localhost:3000/src/assets/${image}`}
+                    alt="Image of a parking"
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>
