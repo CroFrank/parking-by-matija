@@ -2,14 +2,14 @@
 import Navbar2 from "../components/Navbar2"
 import Layout from "../layouts/Layout.astro"
 const images = [
-  "/asa.avif",
-  "/asa.avif",
-  "/asa.avif",
-  "/asa.avif",
-  "/asa.avif",
-  "/asa.avif",
-  "/test.jpg",
-  "/asa.avif",
+  "/p1.jpeg",
+  "/p2.jpeg",
+  "/p3.jpeg",
+  "/p4.jpeg",
+  "/p5.jpeg",
+  "/p6.jpeg",
+  "/p7.jpeg",
+  "/p8.jpeg",
 ]
 ---
 
@@ -41,7 +41,11 @@ const images = [
             images.map((image) => (
               <div class="relative flex h-72 items-end justify-end overflow-hidden rounded-md shadow-lg hover:shadow-xl md:h-96">
                 <div class="absolute inset-0 flex h-full w-full object-cover object-center  transition duration-300 hover:scale-105">
-                  <img src={`${image}`} alt="Image of a parking" />
+                  <img
+                    src={`${image}`}
+                    alt="Parking airport Zagreb"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             ))
