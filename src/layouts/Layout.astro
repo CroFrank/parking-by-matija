@@ -19,6 +19,20 @@ const { title = "Parking by Matija" } = Astro.props
   </head>
   <body>
     <slot />
+    <a
+      aria-label="Chat on WhatsApp"
+      href="https://wa.me/+385921028847?text=Pozdrav,%20zanima%20me%20vaša%20parking%20usluga."
+      class="fixed bottom-10 right-5 sm:bottom-20 sm:right-10 z-30"
+      target="blank"
+    >
+      <img
+        alt="Chat on WhatsApp"
+        src="/whatsapp.png"
+        width={30}
+        height={30}
+        class="hover:scale-110 sm:w-10"
+      />
+    </a>
     <Footer />
   </body>
 </html>
