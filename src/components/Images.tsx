@@ -1,9 +1,9 @@
 import { useState } from "react"
 
-const Images = ({ images }) => {
-  const [selectedImage, setSelectedImage] = useState(null)
+const Images = ({ images }: { images: string[] }) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
-  const openModal = (imgName) => {
+  const openModal = (imgName: string) => {
     setSelectedImage(imgName)
   }
 
@@ -15,10 +15,10 @@ const Images = ({ images }) => {
     <>
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:gap-8">
-          {images.map((image) => (
+          {images.map((image: string, i: number) => (
             <div
               onClick={() => openModal(image)}
-              key={crypto.randomUUID()}
+              key={i}
               className="relative flex h-72 items-end justify-end overflow-hidden rounded-md shadow-lg hover:shadow-xl md:h-96"
             >
               <div className="absolute inset-0 flex h-full w-full object-cover object-center  transition duration-300 hover:scale-105">
