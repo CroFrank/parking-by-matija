@@ -19,7 +19,7 @@ const Images = ({ images }: { images: string[] }) => {
             <div
               onClick={() => openModal(image)}
               key={i}
-              className="relative flex h-72 items-end justify-end overflow-hidden rounded-md shadow-lg hover:shadow-xl md:h-96"
+              className="relative flex h-72 items-end justify-end overflow-hidden rounded-md shadow-lg hover:shadow-xl md:h-96 hover:cursor-pointer"
             >
               <div className="absolute inset-0 flex h-full w-full object-cover object-center  transition duration-300 hover:scale-105">
                 <img
@@ -36,7 +36,7 @@ const Images = ({ images }: { images: string[] }) => {
         <div
           onClick={closeModal}
           id="modal"
-          className="flex fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 justify-center items-center z-50"
+          className="flex fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 justify-center items-center z-50 hover:cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
