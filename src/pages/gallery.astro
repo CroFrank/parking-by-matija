@@ -1,6 +1,8 @@
 ---
 import Navbar2 from "../components/Navbar2"
 import Layout from "../layouts/Layout.astro"
+import Images from "../components/Images"
+
 const images = [
   "/p1.jpeg",
   "/p2.jpeg",
@@ -25,33 +27,13 @@ const images = [
         >
           Galerija slika
         </h2>
-
         <p
           class="mx-auto max-w-screen-md text-center text-gray-500 dark:text-slate-400 md:text-lg"
         >
           Parking - Airport Zagreb by Matija
         </p>
       </div>
-
-      <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-        <div
-          class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:gap-8"
-        >
-          {
-            images.map((image) => (
-              <div class="relative flex h-72 items-end justify-end overflow-hidden rounded-md shadow-lg hover:shadow-xl md:h-96">
-                <div class="absolute inset-0 flex h-full w-full object-cover object-center  transition duration-300 hover:scale-105">
-                  <img
-                    src={`${image}`}
-                    alt="Parking airport Zagreb"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
+      <Images images={images} client:load />
     </main>
   </div>
 </Layout>
