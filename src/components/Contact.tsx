@@ -16,7 +16,9 @@ const Contact = () => {
               className="m-auto object-fit object-center h-10 inline pr-5"
               src="/mobile.svg"
             />
-            <span className="inline font-semibold">+385 92 102 8847</span>
+            <a className="inline font-semibold" href="tel:+385921028847">
+              +385 92 102 8847
+            </a>
           </div>
         </div>
         <iframe
