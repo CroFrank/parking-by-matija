@@ -1,4 +1,5 @@
-import { Card, Typography } from "@material-tailwind/react"
+import pkg from "@material-tailwind/react"
+const { Card, Typography } = pkg
 
 const Pricing = () => {
   const TABLE_HEAD = ["Broj dana", "Cijena u €", "Cijena u kunama"]
