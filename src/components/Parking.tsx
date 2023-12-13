@@ -4,7 +4,7 @@ const Parking = () => {
       <div className="container px-5 py-24 mx-auto flex flex-col">
         <div className="lg:w-4/6 mx-auto">
           <div className="flex flex-col sm:flex-row mt-10">
-            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8 max-sm:pb-5">
+            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8 mb-7 sm:mb-0">
               <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400 mb-5 flex-shrink-0">
                 <img
                   alt="symbol image of location"
@@ -23,7 +23,7 @@ const Parking = () => {
                 </p>
               </div>
             </div>
-            <div className="sm:w-1/3 text-center sm:py-8 max-sm:pb-5">
+            <div className="sm:w-1/3 text-center sm:py-8 mb-7 sm:mb-0">
               <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400 mb-5 flex-shrink-0">
                 <img
                   alt="symbol image of home"
@@ -41,7 +41,7 @@ const Parking = () => {
                 </p>
               </div>
             </div>
-            <div className="sm:w-1/3 text-center sm:pl-8 sm:py-8 max-sm:pb-5">
+            <div className="sm:w-1/3 text-center sm:pl-8 sm:py-8">
               <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400 mb-5 flex-shrink-0">
                 <img
                   alt="symbol image of tranfer by two arrows"

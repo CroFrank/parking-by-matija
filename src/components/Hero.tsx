@@ -7,12 +7,12 @@ const Hero = () => {
       }}
     >
       <div className="absolute inset-0 bg-white bg-opacity-60"></div>
-      <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 max-md:flex max-md:justify-center z-10">
+      <div className="container mx-auto flex px-10 py-20 flex-col items-center md:flex-row">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 flex justify-center z-10">
           <img className="h-80" alt="hero" src="/plane.svg" />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center z-10">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-shadow-black">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium">
             Parking - Airport Zagreb by Matija
           </h1>
           <p className="mb-8 leading-relaxed font-medium">

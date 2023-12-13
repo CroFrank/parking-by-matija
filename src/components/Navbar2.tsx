@@ -1,9 +1,9 @@
 const Navbar2 = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 w-full z-40">
-      <div className="container mx-auto px-6 py-3">
-        <div className="flex flex-col sm:flex-row items-center justify-between">
-          <a href="/" className="flex items-center max-sm:mb-4">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <a href="/" className="flex items-center mb-4 md:mb-0">
             <img
               className="h-8 w-auto mr-4"
               src="/favicon.svg"
