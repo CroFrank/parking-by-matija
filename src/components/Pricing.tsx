@@ -1,51 +1,121 @@
+import { Card, Typography } from "@material-tailwind/react"
+
 const Pricing = () => {
+  const TABLE_HEAD = ["Broj dana", "Cijena u €", "Cijena u kunama"]
+
+  const TABLE_ROWS = [
+    {
+      days: "1",
+      euros: "10€",
+      kunas: "75,35 kn",
+    },
+    {
+      days: "2",
+      euros: "16€",
+      kunas: "120,55 kn",
+    },
+    {
+      days: "3",
+      euros: "22€",
+      kunas: "161,80 kn",
+    },
+    {
+      days: "4",
+      euros: "26€",
+      kunas: "195,90 kn",
+    },
+    {
+      days: "5",
+      euros: "32€",
+      kunas: "241,10 kn",
+    },
+    {
+      days: "6",
+      euros: "36€",
+      kunas: "271,24 kn",
+    },
+    {
+      days: "7",
+      euros: "42€",
+      kunas: "316,45 kn",
+    },
+    {
+      days: "+1",
+      euros: "+4€",
+      kunas: "+30,14 kn",
+    },
+  ]
+
   return (
-    <section className="text-gray-600 body-font" id="pricing">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h2 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-            Cjenik
-          </h2>
-        </div>
-        <div className="flex flex-wrap -m-4">
-          <div className="max-w-screen-md mx-auto p-4">
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">1 Dan</h2>
-                <p className="text-xl mt-2">10 € / 75,35kn</p>
-              </div>
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">2 Dana</h2>
-                <p className="text-xl mt-2">16 € / 120,55kn</p>
-              </div>
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">3 Dana</h2>
-                <p className="text-xl mt-2">22 € / 161,80kn</p>
-              </div>
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">4 Dana</h2>
-                <p className="text-xl mt-2">26 € / 195,90kn</p>
-              </div>
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">5 Dana</h2>
-                <p className="text-xl mt-2">32 € / 241,10kn</p>
-              </div>
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">6 Dana</h2>
-                <p className="text-xl mt-2">36 € / 271,24kn</p>
-              </div>
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">7 Dana</h2>
-                <p className="text-xl mt-2">42 € / 316,45kn</p>
-              </div>
-              <div className="bg-white p-4 rounded shadow">
-                <h2 className="text-lg font-semibold mb-2">Svaki idući Dan</h2>
-                <p className="text-xl mt-2">+4 € / 30,14kn</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section className="text-gray-600 body-font container mx-auto" id="pricing">
+      <div className="flex flex-col text-center w-full mb-6">
+        <h2 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          Cjenik
+        </h2>
+        <p>Fiksni tečaj konverzije 7,5345</p>
       </div>
+      <Card className="h-full w-full max-w-3xl mx-auto overflow-hidden">
+        <table className="w-full table-auto text-center max-w-3xl">
+          <thead>
+            <tr>
+              {TABLE_HEAD.map((head) => (
+                <th
+                  key={head}
+                  className="border-b border-blue-gray-100 bg-blue-gray-50 p-4 w-1/3"
+                >
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal leading-none opacity-70"
+                  >
+                    {head}
+                  </Typography>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {TABLE_ROWS.map(({ days, euros, kunas }, index) => {
+              const isLast = index === TABLE_ROWS.length - 1
+              const classes = isLast
+                ? "p-4"
+                : "p-4 border-b border-blue-gray-50"
+
+              return (
+                <tr key={days}>
+                  <td className={classes}>
+                    <Typography
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
+                    >
+                      {days}
+                    </Typography>
+                  </td>
+                  <td className={classes}>
+                    <Typography
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
+                    >
+                      {euros}
+                    </Typography>
+                  </td>
+                  <td className={classes}>
+                    <Typography
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
+                    >
+                      {kunas}
+                    </Typography>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </Card>
     </section>
   )
 }
