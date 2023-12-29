@@ -15,7 +15,14 @@ const Footer = () => {
           target="_blank"
           rel="noopener"
         >
-          Made by: <span className="text-yellow-700">Fran Branković</span>
+          Made by:{" "}
+          <a
+            className="text-yellow-700"
+            href="https://www.weblifesupport.com/"
+            title="Contact Developer"
+          >
+            Fran Branković
+          </a>
         </a>
       </div>
     </footer>
